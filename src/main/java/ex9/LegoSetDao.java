@@ -16,7 +16,7 @@ public interface LegoSetDao {
     @SqlUpdate("""
         CREATE TABLE legoset (
             id IDENTITY PRIMARY KEY,
-            number VARCHAR NOT NULL,
+            number VARCHAR UNIQUE NOT NULL,
             "year" INTEGER NOT NULL,
             pieces INTEGER NOT NULL
         )
